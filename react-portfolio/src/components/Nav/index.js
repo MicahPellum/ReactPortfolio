@@ -1,30 +1,48 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 function Nav() {
 
   return (
-    <header>
-        <header>
-  {/* <h2>
-    <a href="/">
-      <span role="img" aria-label="camera"> 📸</span> Oh Snap!
-    </a>
-  </h2> */}
+    // <header>
+<Router>
+     
+
   <nav>
     <ul className="flex-row">
       <li className="mx-2">
-        <a href="#about">
-          About me
-        </a>
+       
       </li>
-      <li>
-        <span>Contact</span>
-      </li>
-    </ul>
-  </nav>
-</header>
-    </header>
+      <li><Link to="/">Home</Link></li>
+        <li><Link to="/about">About Me</Link></li>
+        <li><Link to="/portfolio">Portfolio</Link></li>
+        <li><Link to="/contact">Contact</Link></li>
+        <li><Link to="/resume">Resume</Link></li>
+        </ul>
+        </nav>
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/users">
+            <Users />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+    </Router>
+   
   );
+
+       
+
+  
 }
 
 
