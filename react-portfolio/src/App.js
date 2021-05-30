@@ -1,36 +1,24 @@
 import React from 'react';
-import Nav from './components/Nav';
+import { HashRouter as Router, Route} from 'react-router-dom';
+import Header from './components/Header';
 import About from './components/About';
-import Portfolio from './pages/Portfolio';
-import Contact from './pages/Contact';
-import Resume from './pages/Resume';
-
-
-function App() {
-  return (
-    <div>
-      <Nav />
-      <main>
-       <About />
-    <Portfolio />
-    <Contact />
-    <Resume />
-        
-      </main>
-
-    </div>
-  );
-}
-
-export default App;
-
-
+import Portfolio from './components/Portfolio';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 import './App.css';
-import PortfolioContainer from './components/Main';
 
 function App() {
   return (
-    <PortfolioContainer />
+    <Router>
+      <div class="content">
+        <Header />
+        <Route exact path="/" component={About} />
+        <Route path="/about" component={About} />
+        <Route path="/Portfolio" component={Portfolio} />
+        <Route path="/Contact" component={Contact} />
+      </div>
+      <Footer />
+    </Router>
   );
 }
 
