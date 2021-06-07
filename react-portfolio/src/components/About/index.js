@@ -15,7 +15,7 @@ function About() {
               <p class="text">
                 You can view my work history and education by visiting my LinkedIn profile. 
               </p>
-              <a href="/" class="btn" target="_blank">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/micah-pellum-2800a01b9/" class="btn" target="_blank">LinkedIn</a>
             </div>
   
 </div>
